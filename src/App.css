@@ -1,0 +1,9 @@
+*{
+    font-family: "Manrope", sans-serif;
+}
+
+.navbar-li-style li{
+    font-size: 16px;
+    font-weight: 400;
+    color: #101727;
+}
