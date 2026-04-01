@@ -1,12 +1,18 @@
+Create Beautiful Github Readme with following description
+Name of your Project এর উত্তর :
 # আমার প্রজেক্টের নাম DigiTools  
 একটি ডিজিটাল টুলস সাইট
 
+A little Description এর উত্তর: 
 একটি আধুনিক এবং রেসপনসিভ ডিজিটাল প্রোডাক্ট ওয়েবসাইট, যেখানে ইউজাররা খুব সহজেই তাদের পছন্দের টুলসগুলো বাই করতে এবং কার্টে যোগ করতে পারবেন।
 প্রযুক্তি Technology 
 
+Technology that you use এর উত্তর:
 এই প্রজেক্টটি তৈরি করতে আমি নিচের Technology ব্যবহার করেছি:
 React, Tailwind CSS, React Icons JavaScript es6 
 
+
+3 Features about your project. এর উত্তর 
 এই প্রজেক্টের ৩টি বিশেষ ফিচার হলো:
 ডাইনামিক Buy Cart
 একই পেজে থেকে 'Products' এবং 'Cart' সেকশনের মধ্যে সুইচ করা যায়
