@@ -18,6 +18,11 @@ React, Tailwind CSS, React Icons JavaScript es6
 একই পেজে থেকে 'Products' এবং 'Cart' সেকশনের মধ্যে সুইচ করা যায়
 কার্টে কোনো আইটেম না থাকলে Empty মেসেজ দেখাবে
 
+# My Project Live Link:
+https://mrrana26assignment-6.netlify.app/
+# My GitHub Repository Link: 
+https://github.com/MRrana26/assignment-6
+
 
 # React + Vite
 
