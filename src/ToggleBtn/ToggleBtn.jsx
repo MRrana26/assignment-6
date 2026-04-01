@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToggleBtn = ({ handleToggle, showCart }) => {
+const ToggleBtn = ({ handleToggle, showCart, cartCount }) => {
     return (
         <div className='py-20'>
             <div className="w-10/12 mx-auto text-center mb-12">
@@ -22,7 +22,7 @@ const ToggleBtn = ({ handleToggle, showCart }) => {
                     onClick={() => handleToggle(true)} 
                     className={`px-8 py-2 rounded-full font-medium transition-all ${showCart ? 'bg-[#9514FA] text-white shadow-md' : 'text-gray-500'}`}
                 >
-                    Cart (<span>0</span>)
+                    Cart (<span>{cartCount}</span>)
                 </button>
             </div>
         </div>
