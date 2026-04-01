@@ -9,9 +9,9 @@ import iconPortfolio from '../assets/products/portfolio.png';
 import iconSocial from '../assets/products/social-media.png';
 import iconSeo from '../assets/products/seo.png';
 import iconVideoicon from '../assets/products/videoicon.png';
-                   
 
-const Products = () => {
+
+const Products = ({ handleAddToCart }) => {
 
     const productsData = [
         {
@@ -119,7 +119,7 @@ const Products = () => {
     return (
         <section id='productsSection' className="bg-white py-20">
 
-        
+
             <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {productsData.map((item) => (<div key={item.id} className="p-8 rounded-3xl border border-gray-100 shadow-sm bg-white relative hover:shadow-xl transition-all duration-300 group">
 
@@ -151,8 +151,8 @@ const Products = () => {
                     </ul>
 
 
-                    <button className="w-full rounded-full py-4 bg-[#9514FA] text-white rounded-2xl font-bold hover:bg-[#7a10cc] transition-colors shadow-lg active:scale-95 duration-200">
-                        Buy Now
+                    <button
+                        onClick={() => handleAddToCart(item)} className="w-full rounded-full py-4 bg-[#9514FA] text-white rounded-2xl font-bold hover:bg-[#7a10cc] transition-colors shadow-lg active:scale-95 duration-200">Buy Now
                     </button>
                 </div>
                 ))}

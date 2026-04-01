@@ -13,21 +13,43 @@ import ToggleBtn from './ToggleBtn/ToggleBtn'
 
 function App() {
   const [showCart, setShowCart] = useState(false);
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (product) => {
+    setCart([...cart, product]);
+    alert(`${product.title} added to cart!`);
+  };
+
+  const handleRemoveFromCart = (id) => {
+    const remaining = cart.filter(item => item.id !== id);
+    setCart(remaining);
+  };
+
+  const handleCheckout = () => {
+    setCart([]); // সব রিমুভ হবে
+    alert("Checkout successful! Your order has been placed.");
+  };
 
   return (
     <>
       <header>
-        <Navbar />
+        <Navbar cartCount={cart.length} handleToggle={setShowCart} />
       </header>
 
       <main>
         <Banner />
         <StarsSection />
         
-        <ToggleBtn handleToggle={setShowCart} showCart={showCart} />
+        <ToggleBtn handleToggle={setShowCart} showCart={showCart} cartCount={cart.length} />
 
         {
-          showCart ? <CartSection /> : <Products />
+          showCart ? 
+          <CartSection 
+            cart={cart} 
+            handleRemove={handleRemoveFromCart} 
+            handleCheckout={handleCheckout} 
+          /> : 
+          <Products handleAddToCart={handleAddToCart} />
         }
         
         <StepsAction />

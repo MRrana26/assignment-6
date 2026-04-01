@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaCartPlus } from 'react-icons/fa';
 import { IoMenu, IoClose } from 'react-icons/io5';
 
-const Navbar = () => {
+const Navbar = ({ cartCount, handleToggle }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -30,13 +30,20 @@ const Navbar = () => {
 
                 <div className="flex justify-between items-center gap-1 md:gap-3">
 
-                    <div className="hover:shadow-2xl hover:bg-[#ebeaee] p-2 rounded-full">
-                        <FaCartPlus className='cursor-pointer' /> </div>
+                    <div onClick={() => handleToggle(true)} className="relative hover:shadow-2xl hover:bg-[#ebeaee] p-2 rounded-full cursor-pointer"><FaCartPlus />
+
+                        {cartCount > 0 && (
+                            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
+                                {cartCount}
+                            </span>
+                        )}
+                        
+                    </div>
 
                     <button className='cursor-pointer hover:bg-[#ebeaee] px-2 py-1 rounded-full hover:text-black hover:font-semibold'>Login</button>
 
                     <button className="hidden sm:block btn rounded-full bg-gradient-to-tr from-[#4F39F6] to-[#9514FA] text-white">Get Started</button>
-                    
+
                     <div className="block md:hidden text-2xl" onClick={() => setIsOpen(!isOpen)}>
                         {isOpen ? <IoClose className='cursor-pointer' /> : <IoMenu className='cursor-pointer' />}
                     </div>
@@ -44,7 +51,6 @@ const Navbar = () => {
 
                 {isOpen && (
                     <div className="absolute top-16 left-0 w-full bg-white shadow-lg rounded-xl p-5 md:hidden z-50">
-                        
                         <ul className='flex flex-col gap-4'>
                             <li><a onClick={() => setIsOpen(false)} href="#productsSection">Products</a></li>
 
