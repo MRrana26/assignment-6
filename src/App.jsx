@@ -1,4 +1,4 @@
-
+import { useState } from 'react'
 import './App.css'
 import Banner from './Banner/Banner'
 import CartSection from './CartSection/CartSection'
@@ -9,14 +9,13 @@ import Pricing from './Pricing/Pricing'
 import Products from './Products/Products'
 import StarsSection from './StarsSection/StarsSection'
 import StepsAction from './StepsAction/StepsAction'
-
+import ToggleBtn from './ToggleBtn/ToggleBtn'
 
 function App() {
-
+  const [showCart, setShowCart] = useState(false);
 
   return (
     <>
-    
       <header>
         <Navbar />
       </header>
@@ -24,19 +23,21 @@ function App() {
       <main>
         <Banner />
         <StarsSection />
-        <Products />
+        
+        <ToggleBtn handleToggle={setShowCart} showCart={showCart} />
+
+        {
+          showCart ? <CartSection /> : <Products />
+        }
+        
         <StepsAction />
-        <CartSection />
         <Pricing />
         <Optional />
-        
-
       </main>
 
       <footer>
         <Footer />
       </footer>
-
     </>
   )
 }

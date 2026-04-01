@@ -9,6 +9,7 @@ import iconPortfolio from '../assets/products/portfolio.png';
 import iconSocial from '../assets/products/social-media.png';
 import iconSeo from '../assets/products/seo.png';
 import iconVideoicon from '../assets/products/videoicon.png';
+                   
 
 const Products = () => {
 
@@ -118,20 +119,7 @@ const Products = () => {
     return (
         <section id='productsSection' className="bg-white py-20">
 
-            <div className="w-10/12 mx-auto text-center mb-12">
-                <h1 className="text-4xl font-bold text-[#101727] mb-4">Premium Digital Tools</h1>
-                <p className="text-gray-500 max-w-2xl mx-auto">
-                    Choose from our curated collection of premium digital products designed to boost your productivity and creativity.
-                </p>
-
-
-                <div className="flex justify-center mt-8 bg-gray-50 w-fit mx-auto p-1 rounded-full border border-gray-100">
-                    <button className="px-8 py-2 bg-[#9514FA] text-white rounded-full font-medium shadow-md">Products</button>
-                    <button className="px-8 py-2 text-gray-500 rounded-full font-medium">Cart (<span>0</span>)</button>
-                </div>
-            </div>
-
-
+        
             <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {productsData.map((item) => (<div key={item.id} className="p-8 rounded-3xl border border-gray-100 shadow-sm bg-white relative hover:shadow-xl transition-all duration-300 group">
 
