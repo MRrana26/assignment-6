@@ -30,14 +30,14 @@ const Navbar = ({ cartCount, handleToggle }) => {
 
                 <div className="flex justify-between items-center gap-1 md:gap-3">
 
-                    <div onClick={() => handleToggle(true)} className="relative hover:shadow-2xl hover:bg-[#ebeaee] p-2 rounded-full cursor-pointer"><FaCartPlus />
+                    <div onClick={() => handleToggle(true)} className="relative hover:shadow-2xl hover:bg-[#ebeaee] p-2 rounded-full cursor-pointer"><FaCartPlus href="#productsSection"  />
 
                         {cartCount > 0 && (
                             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
                                 {cartCount}
                             </span>
                         )}
-                        
+
                     </div>
 
                     <button className='cursor-pointer hover:bg-[#ebeaee] px-2 py-1 rounded-full hover:text-black hover:font-semibold'>Login</button>
